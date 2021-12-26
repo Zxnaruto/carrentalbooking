@@ -1,5 +1,6 @@
 # carrentalbooking
-**We recommend looking at the PDF in the doc folder (Car Rental Booking Project Specification)**
+**We recommend looking at the PDF in the doc folder (Car Rental Booking Project Specification),and i am sorry that my front-end skills are not very good, the page is rather ugly, but the function is normal.**
+
 ## 1.Instructions
 
 This is a  simple web client rental car booking API service for customers  to  reserve a car for a period of time. Users can log in and register for the system and can book and return vehicles within a certain time frame.
