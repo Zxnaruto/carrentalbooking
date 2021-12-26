@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Confirm</title>
+</head>
+<body>
+You have 10 minutes to decide is or not rent the car?
+<br>
+<table border="1">
+    <tr>
+        <th>Order No</th>
+
+    </tr>
+    <tr>
+        <td th:text="${orderNo}"></td>
+    </tr>
+</table>
+
+<script language="javascript">
+    function confirm(){
+        document.form1.action="/rentconfirm";
+        document.form1.submit();
+    }
+    function cancel(){
+        document.form1.action="/rentcancel";
+        document.form1.submit();
+    }
+</script>
+<form name="form1" method="post">
+    please Input order No to decide: <input type="text" name="orderNo">
+    <br>
+    <input type="button" name="btn1" value="Yes" onclick="confirm();">
+    <input type="button" name="btn2" value="No" onclick="cancel();">
+</form>
+</body>
+</html>

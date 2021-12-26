@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <title>Login</title>
+</head>
+<body>
+    <h1>Login</h1>
+    Username is user phone, please use phone to login.
+    <br>
+    <form method="post" th:action="@{/login}">
+        Username: <input name="username" type="text"  id="username">
+        <br>
+        Password: <input name="password" type="password" id="password">
+        <br>
+        <button type="submit">Sign In</button>
+        <a href="/register">user sign up</a>
+    </form>
+</body>
+</html>

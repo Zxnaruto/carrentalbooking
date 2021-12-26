@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>User Order</title>
+    <style type="text/css">
+        .menu {
+            font-size: 0;
+            list-style: none;
+            padding: 0;
+        }
+        .menu li{
+            display:inline-block;
+            width:200px;
+            height:48px;
+            border:1px solid black;
+            font-size:16px;
+            margin-right:-1px;
+            text-align:center;
+            line-height:48px;
+        }
+        .menu a{
+            font-family: "Microsoft YaHei UI";
+            color:black;
+            text-decoration: none;
+        }
+        .menu li:hover{
+            background-color: lightblue;
+        }
+        .menu a:hover{
+            color:black;
+        }
+    </style>
+</head>
+<body>
+<ul class="menu">
+    <li><a th:href="@{/home}">Can Rent Car Message</a></li>
+    <li><a th:href="@{/rent}">Rent Car</a></li>
+    <li><a th:href="@{/back}">Back Car</a></li>
+    <li><a th:href="@{/order}">My Order</a></li>
+    <li><a th:href="@{/logout}">logout</a></li>
+</ul>
+<table border="1">
+    <tr>
+        <th>Order No</th>
+        <th>Create Time</th>
+        <th>State</th>
+        <th>Start Time</th>
+        <th>End Time</th>
+    </tr>
+    <tr th:each = "order: ${orders}">
+        <td th:text="${order.orderNo}"></td>
+        <td th:text="${order.createTime}"></td>
+        <td th:text="${order.state}"></td>
+        <td th:text="${order.startTime}"></td>
+        <td th:text="${order.endTime}"></td>
+    </tr>
+</table>
+</body>
+</html>
