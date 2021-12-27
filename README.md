@@ -61,7 +61,7 @@ The specific implementation can be viewed in the source code
 * task: time task
 * generate: beetlsql code generate
 
-## 3.Tech Stack
+## 2.Tech Stack
 
 * Java JDK8
 
@@ -89,7 +89,7 @@ The specific implementation can be viewed in the source code
 
   .......................
 
-## 4.Getting Started
+## 3.Getting Started
 
 **1.clone code from github**
 
@@ -175,7 +175,7 @@ CREATE TABLE `car_rental_order`  (
  (4) when all dependence are Ok, include Maven dependence. You can run this project and init data
 
    In you browse input: localhost:8080/init, and execute. You will see return "success" .
-   ## 5.Running demo
+   ## 4.Running demo
 
   init data
 ![image](https://user-images.githubusercontent.com/30120108/147417681-6b73cdbe-e436-4cad-ab8d-d363c63a90de.png)
@@ -196,7 +196,7 @@ and the car stock will reduce one. You can see My Order and you will see the ord
 (5) Back car: you can return the car according to the order number and state=1 (order placed), after returning the car stock plus one. and order state update equal 3(finished).
 ![image](https://user-images.githubusercontent.com/30120108/147417771-5bbe84c7-e8cd-4f0d-83d4-3603c1b662ca.png)
 (6) logout: return the login page
-## 6.Important interface descriptions
+## 5.Important interface descriptions
 
 Since I'm a Java back-end, I'm not very familiar with the front-end, but to show how it works, I went with Spring Boot Thymeleaf.
 
@@ -244,7 +244,7 @@ order display
 
 http://localhost:8080/order
 
-## 8.Deploy to the cloud
+## 6.Deploy to the cloud
 
 As I don't have access to a free cloud, and as I've been delayed by some personal matters, I can only give an overview of the deployment steps for now.
 Steps.
@@ -257,7 +257,7 @@ Steps.
 6. you may need to open a port or turn off the firewall
 7. Access the project in the browser by using ip+port
 
-## 9.Optimisation
+## 7.Optimisation
 
 * 1.Complete operations related to the administrator's webpage, including adding, deleting and changing in the backend of the webpage
 
