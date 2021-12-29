@@ -69,4 +69,4 @@ updateOrderStateCancelByOutTime
     
 getOrderStateCancelByOutTime
 ===
-    SELECT #use("cols")# From car_rental_order WHERE state=0 AND expire_time>=NOW();
+    SELECT #use("cols")# From car_rental_order WHERE state=0 AND expire_time<=NOW();
