@@ -60,4 +60,12 @@ subCarStock
 
 getAllUpStateCarInfo
 ===
-    SELECT id,car_name,car_stock,rent FROM car_info WHERE car_stock > 0; 	
+    SELECT id,car_name,car_stock,rent FROM car_info WHERE car_stock > 0;
+    
+getCarInfoByPageAndType
+===
+    Select * from car_info where car_type = #type# and car_stock > 0 limit #num#,#size#;
+
+getCarInfoByPage
+===
+    select * from car_info where car_stock > 0 limit #num#, #size#;

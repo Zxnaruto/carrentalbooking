@@ -15,4 +15,20 @@ import java.util.List;
 public class CarRentalOrderPageDTO {
     List<CarRentalOrder> carRentalOrders;
     Integer total;
+
+    public List<CarRentalOrder> getCarRentalOrders() {
+        return carRentalOrders;
+    }
+
+    public void setCarRentalOrders(List<CarRentalOrder> carRentalOrders) {
+        this.carRentalOrders = carRentalOrders;
+    }
+
+    public Integer getTotal() {
+        return total;
+    }
+
+    public void setTotal(Integer total) {
+        this.total = total;
+    }
 }

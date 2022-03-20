@@ -27,4 +27,10 @@ public interface CarInfoDao extends BaseMapper<CarInfo> {
     @SqlStatement(params = "carId")
     int subCarStock(Long carId);
 
+    @SqlStatement(params = "type,num,size")
+    List<CarInfo> getCarInfoByPageAndType(Integer type, Integer num, Integer size);
+
+    @SqlStatement(params = "num,size")
+    List<CarInfo> getCarInfoByPage(Integer num, Integer size);
+
 }

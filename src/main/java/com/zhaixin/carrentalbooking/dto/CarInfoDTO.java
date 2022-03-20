@@ -34,4 +34,52 @@ public class CarInfoDTO {
      * 租金/天
      */
     private Long rent;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Integer getCarStock() {
+        return carStock;
+    }
+
+    public void setCarStock(Integer carStock) {
+        this.carStock = carStock;
+    }
+
+    public Integer getCarType() {
+        return carType;
+    }
+
+    public void setCarType(Integer carType) {
+        this.carType = carType;
+    }
+
+    public Integer getState() {
+        return state;
+    }
+
+    public void setState(Integer state) {
+        this.state = state;
+    }
+
+    public String getCarName() {
+        return carName;
+    }
+
+    public void setCarName(String carName) {
+        this.carName = carName;
+    }
+
+    public Long getRent() {
+        return rent;
+    }
+
+    public void setRent(Long rent) {
+        this.rent = rent;
+    }
 }

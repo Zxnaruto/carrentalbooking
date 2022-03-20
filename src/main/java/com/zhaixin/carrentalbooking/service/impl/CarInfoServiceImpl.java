@@ -32,6 +32,7 @@ public class CarInfoServiceImpl implements CarInfoService {
 
     @Autowired
     private CarInfoDao carInfoDao;
+
     @Autowired
     private RedisLock redisLock;
 
@@ -39,17 +40,14 @@ public class CarInfoServiceImpl implements CarInfoService {
     public CommonResult<CarInfoPageDTO> showCarInfo(Integer pageNum, Integer pageSize, Integer type) {
         int num = pageNum == null ? 1 : pageNum;
         int size = pageSize == null ? 10 : pageSize;
-        LambdaQuery<CarInfo> query = null;
+        List<CarInfo> carInfos = null;
         if(type != null) {
-            query = carInfoDao.createLambdaQuery().andEq("car_type", type).andGreat("car_stock",0);
+            carInfos = carInfoDao.getCarInfoByPageAndType(type,num,size);
         }else {
-            query = carInfoDao.createLambdaQuery().andGreat("car_stock",0);;
+            carInfos = carInfoDao.getCarInfoByPage(num, size);
         }
-        if(query == null) {
-            return new CommonResult<>(ResultCode.SUCCESS.getCode(),ResultCode.SUCCESS.getMessage(), null);
-        }
+
         CarInfoPageDTO carInfoPageDTO = new CarInfoPageDTO();
-        List<CarInfo> carInfos = query.page(num, size).getList();
         carInfoPageDTO.setCarInfos(carInfos);
         carInfoPageDTO.setTotal(carInfos.size());
 
